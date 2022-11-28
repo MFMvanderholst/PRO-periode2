@@ -1,0 +1,275 @@
+div.containerFAQ {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+
+div#buttons {
+    position: relative;
+    max-width: 800px;
+    padding-top: 3rem;
+    margin: 0 auto;
+  }
+  div#buttons div.tabs {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3rem;
+    justify-content: space-evenly;
+    z-index: 2;
+  }
+  div#buttons div.tabs span.button-tab {
+    border-width: 1px 1px 0 1px;
+    border-style: solid;
+    border-radius: 0.5rem 0.5rem 0 0;
+    position: relative;
+    height: 100%;
+    padding: 1rem;
+    text-align: center;
+    font-family: "Share Tech Mono", monospace;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    flex: 1;
+  }
+  div#buttons div.tabs span.button-tab.active {
+    background-color: #110128;
+    
+  }
+  div#buttons div.tabs span.button-tab.active:after {
+    border-width: 0 1px;
+    border-style: solid;
+    
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: -1px;
+    width: 100%;
+    height: 1px;
+    background-color: #110128;
+  }
+  div#buttons div.button-group-tab {
+    -webkit-transition: all 0.5s ease 0s;
+    -moz-transition: all 0.5s ease 0s;
+    -ms-transition: all 0.5s ease 0s;
+    -o-transition: all 0.5s ease 0s;
+    transition: all 0.5s ease 0s;
+    position: relative;
+    width: 100%;
+    height: 0;
+    background-color: #110128;
+    opacity: 0;
+    pointer-events: none;
+    align-content: flex-start;
+    align-items: flex-start;
+    overflow: hidden;
+    z-index: 0;
+  }
+  div#buttons div.button-group-tab.active {
+    border-width: 1px;
+    border-style: solid;
+    border-color: transparent;
+    border-radius: 0 0 0.5rem 0.5rem;
+    height: fit-content;
+    margin: 0;
+    opacity: 1;
+    
+    pointer-events: auto;
+    z-index: 1;
+  }
+  div#buttons div.button-group-tab div.button {
+    -webkit-transition: transform 0.5s cubic-bezier(0.02, 0.56, 0.25, 1) 0s;
+    -moz-transition: transform 0.5s cubic-bezier(0.02, 0.56, 0.25, 1) 0s;
+    -ms-transition: transform 0.5s cubic-bezier(0.02, 0.56, 0.25, 1) 0s;
+    -o-transition: transform 0.5s cubic-bezier(0.02, 0.56, 0.25, 1) 0s;
+    transition: transform 0.5s cubic-bezier(0.02, 0.56, 0.25, 1) 0s;
+    margin: 1rem 1rem;
+    align-items: flex-start;
+    align-content: flex-start;
+    transform: scale(1);
+  }
+  div#buttons div.button-group-tab div.button:hover {
+    transform: scale(1.2);
+  }
+  div#buttons div.button-group-tab div.button:hover a span {
+    color: #EAF205;
+  }
+  div#buttons div.button-group-tab div.button a {
+    display: flex;
+    width: 4rem;
+    color: #efefef;
+    text-decoration: none;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.8rem;
+  }
+  div#buttons div.button-group-tab div.button a i {
+    text-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.3);
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    display: flex;
+    width: 3.5rem;
+    height: 3.5rem;
+    font-size: 1.8rem;
+    align-items: center;
+    justify-content: center;
+  }
+  div#buttons div.button-group-tab div.button a span {
+    padding: 0.5rem 0;
+  }
+  button,
+.btn {
+  -webkit-box-shadow: 0 0.2rem 0.2rem 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0.2rem 0.2rem 0 rgba(0, 0, 0, 0.3);
+  -webkit-transition: box-shadow 0.5s ease 0s, background-color 0.5s ease 0s, border-color 0.5s ease 0s;
+  -moz-transition: box-shadow 0.5s ease 0s, background-color 0.5s ease 0s, border-color 0.5s ease 0s;
+  -ms-transition: box-shadow 0.5s ease 0s, background-color 0.5s ease 0s, border-color 0.5s ease 0s;
+  -o-transition: box-shadow 0.5s ease 0s, background-color 0.5s ease 0s, border-color 0.5s ease 0s;
+  transition: box-shadow 0.5s ease 0s, background-color 0.5s ease 0s, border-color 0.5s ease 0s;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem 0;
+  border-radius: 0.5rem;
+  border: 2px solid transparent;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+button.outline,
+.btn.outline {
+  background-color: transparent !important;
+  border: 2px solid;
+}
+
+button:hover,
+.btn:hover {
+  -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.1);
+}
+
+button.c-1,
+.btn.c-1 {
+  background-color: #3C038C;
+  color: #ededed;
+}
+
+button.c-1:hover,
+.btn.c-1:hover {
+  background-color: #5104be;
+}
+
+button.c-1.outline,
+.btn.c-1.outline {
+  color: #3C038C;
+  border-color: #3C038C;
+}
+
+button.c-1.outline:hover,
+.btn.c-1.outline:hover {
+  background-color: rgba(255, 255, 255, 0.5) !important;
+  color: #5104be;
+  border-color: #5104be;
+}
+
+button.c-2,
+.btn.c-2 {
+  
+  color: #333;
+}
+
+button.c-2:hover,
+.btn.c-2:hover {
+  background-color: #3f04c0;
+}
+
+button.c-2.outline,
+.btn.c-2.outline {
+  color: #5005F2;
+  border-color: #5005F2;
+}
+
+button.c-2.outline:hover,
+.btn.c-2.outline:hover {
+  background-color: rgba(255, 255, 255, 0.5) !important;
+  color: #3f04c0;
+  border-color: #3f04c0;
+}
+
+button.c-3,
+.btn.c-3 {
+  background-color: #F205E2;
+  color: #333;
+}
+
+button.c-3:hover,
+.btn.c-3:hover {
+  background-color: #c004b3;
+}
+
+button.c-3.outline,
+.btn.c-3.outline {
+  color: #F205E2;
+  border-color: #F205E2;
+}
+
+button.c-3.outline:hover,
+.btn.c-3.outline:hover {
+  background-color: rgba(255, 255, 255, 0.5) !important;
+  color: #c004b3;
+  border-color: #c004b3;
+}
+
+button.c-4,
+.btn.c-4 {
+  background-color: #F24405;
+  color: #333;
+}
+
+button.c-4:hover,
+.btn.c-4:hover {
+  background-color: #c03604;
+}
+
+button.c-4.outline,
+.btn.c-4.outline {
+  color: #F24405;
+  border-color: #F24405;
+}
+
+button.c-4.outline:hover,
+.btn.c-4.outline:hover {
+  background-color: rgba(255, 255, 255, 0.5) !important;
+  color: #c03604;
+  border-color: #c03604;
+}
+
+button.c-5,
+.btn.c-5 {
+  background-color: #EAF205;
+  color: #333;
+}
+
+button.c-5:hover,
+.btn.c-5:hover {
+  background-color: #bac004;
+}
+
+button.c-5.outline,
+.btn.c-5.outline {
+  color: #EAF205;
+  border-color: #EAF205;
+}
+
+button.c-5.outline:hover,
+.btn.c-5.outline:hover {
+  background-color: rgba(255, 255, 255, 0.5) !important;
+  color: #bac004;
+  border-color: #bac004;
+}

@@ -1,0 +1,21 @@
+{
+  "name": "pro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "sass -w scss:css",
+    "minify": "sass -w scss:css --style=compressed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MFMvanderholst/PRO.git"
+  },
+  "author": "MAC",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MFMvanderholst/PRO/issues"
+  },
+  "homepage": "https://github.com/MFMvanderholst/PRO#readme"
+}

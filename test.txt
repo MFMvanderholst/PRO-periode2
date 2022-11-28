@@ -1,0 +1,16 @@
+Checklist:
+
+Wireframe
+User Story Mapping
+Github
+
+Home pagina
+Product
+Media
+FAQ
+
+Code:
+HTML
+CSS
+PHP
+Database
