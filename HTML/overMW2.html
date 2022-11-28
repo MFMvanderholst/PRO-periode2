@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../img/MW2.png" type="image/x-icon">
+    <link rel="stylesheet" href="../CSS/mw2.css">
     <link rel="stylesheet" href="../css/style.css">
     <title>Over Modern Warfare II</title>
 </head>
@@ -12,13 +13,15 @@
 
     <header>
         <nav>
-             <ul>
-                <li><img class="miniLogo" src="../img/MW2.png" alt=""></li>
-                 <li><a href="../index.html">Home</a></li>
-                 <li><a href="overMW2.html">Over Modern Warfare II</a></li>
-                 <li><a href="media.html">Media</a></li>
-                 <li><a href="FAQ.html">FAQ</a></li>
-             </ul>
+            <div class="logo">
+              <img src="../img/MW2.png" alt="">
+            </div>
+            <ul>
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="overMW2.html">Game</a></li>
+              <li><a href="media.html">Media</a></li>
+              <li><a href="FAQ.html">FAQ</a></li>
+            </ul>
         </nav>
      </header>
 
@@ -119,5 +122,12 @@
             </div>
         </div>
     </footer>
+    <script>
+        const logo = document.querySelector('div.logo');
+    
+        logo.addEventListener('click', () => {
+          document.querySelector('nav').classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
