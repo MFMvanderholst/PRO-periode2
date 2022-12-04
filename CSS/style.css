@@ -103,6 +103,15 @@ h1 {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+.FAQ {
+  display: flex;
+  width: 100%;
+  margin-top: 0.3rem;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 100vh;
+}
+
 
 .c-1 {
   background-color: #000000;
@@ -190,11 +199,13 @@ h1 {
   
   .col-6 {
     width: 50%;
+    justify-content: center;
+    align-items: center;
   }
   
   .col-7 {
     width: 58.3333333333%;
-    left: 10em;
+    left: 19em;
   }
   
   .col-8 {
