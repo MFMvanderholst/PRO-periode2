@@ -1,3 +1,44 @@
+<?php 
+
+include('../PHP/config.php');
+
+$dsn = "mysql:host=$dbHost;dbname=$dbName;charset=UTF8";
+
+try {
+    $pdo = new PDO($dsn, $dbUser, $dbPass);
+    if ($pdo) {
+        // echo "Er is een verbinding met de musql server";
+    } else {
+        echo "Er is een interne server error opgetreden";
+    }
+} catch (PDOException $e) {
+    echo $e->getMessage();
+}
+
+$sql = "SELECT  question,
+                answer
+                FROM faq";
+
+$statement = $pdo->prepare($sql);
+$statement->execute();
+$result = $statement->fetchAll(PDO::FETCH_OBJ);
+var_dump($result);
+$tableRows = "";
+
+foreach($result as $info) {
+    $tableRows .= "<tr>
+                    <td>$info->question</td>
+                    <td>$info->answer</td>
+                    <td>
+                        <a href'delete.php'>
+                        <img src='img/b_drop.pgn' alt='cross'>
+                    </td>
+                  </tr>";
+}
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,6 +53,19 @@
 
 </head>
 <body class="achtergrond">
+
+<table border='1'>
+    <thead>
+        <th>vraag</th>
+        <th>antwoord</th>
+        <th></th>
+    </thead>
+    <tbody>
+        <?php echo $tableRows; ?>
+    </tbody>
+</table>
+
+
     <nav>
         <div class="logo">
           <img src="../img/MW2.png" alt="">
@@ -20,7 +74,7 @@
           <li><a href="../index.html">Home</a></li>
           <li><a href="overMW2.html">Game</a></li>
           <li><a href="media.html">Media</a></li>
-          <li><a href="FAQ.html">FAQ</a></li>
+          <li><a href="FAQ.php">FAQ</a></li>
         </ul>
     </nav>
 

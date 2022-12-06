@@ -13,11 +13,11 @@ try {
     echo "Systeemmelding: " . $e->getMessage();
 }
 
-$sql = "INSERT INTO pro_periode2 (question,
-                                answer)
+$sql = "INSERT INTO pro_periode2 (vraag,
+                                antwoord)
         VALUES              (NULL
-                            ,:vraag
-                            ,:antwoord)";
+                            ,:question
+                            ,:answer)";
 
 
 $statement = $pdo->prepare($sql);
