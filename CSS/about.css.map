@@ -1,1 +1,5 @@
+<<<<<<< HEAD
+{"version":3,"sourceRoot":"","sources":["../scss/about.scss"],"names":[],"mappings":"AAAA;EACI;EACA;EACA;EACA;EACA;EACA;;;AAEJ;EACI;;;AAEJ;EACI;;;AAEJ;EACI;;;AAEJ;EAII;;AAHA;EACI;;;AAIR;EAOI;EACA;;AAPA;EACI;EACA;EACA;EACA","file":"about.css"}
+=======
 {"version":3,"sourceRoot":"","sources":["../scss/about.scss"],"names":[],"mappings":"AAAA,UACI,SACA,UACA,eACA,WACA,YACA,WAEJ,GACI,iBAEJ,GACI,eAEJ,EACI,iBAEJ,GAII,qBAHA,MACI,iBAIR,KAOI,kBANA,SACI,qBACA,cACA,YACA","file":"about.css"}
+>>>>>>> 28e6d898dc2bfd03b13a0c91910433f75a5d216a
