@@ -22,18 +22,19 @@ $sql = "SELECT  question,
 $statement = $pdo->prepare($sql);
 $statement->execute();
 $result = $statement->fetchAll(PDO::FETCH_OBJ);
-var_dump($result);
-$tableRows = "";
+$faq = "";
+$question ="";
+$answer = "";
 
 foreach($result as $info) {
-    $tableRows .= "<tr>
-                    <td>$info->question</td>
-                    <td>$info->answer</td>
-                    <td>
-                        <a href'delete.php'>
-                        <img src='img/b_drop.pgn' alt='cross'>
-                    </td>
-                  </tr>";
+    $faq .= "<div class='containerFAQ col-4'>
+    <div class='dropdown'>
+        <button class='dropbtn' for='vraag'>$info->question</button>
+        <div class='dropdown-content'>
+          <p href='#' for='antwoord'>$info->answer</p>
+        </div>
+      </div>
+</div>";
 }
 ?>
 
@@ -54,16 +55,6 @@ foreach($result as $info) {
 </head>
 <body class="achtergrond">
 
-<table border='1'>
-    <thead>
-        <th>vraag</th>
-        <th>antwoord</th>
-        <th></th>
-    </thead>
-    <tbody>
-        <?php echo $tableRows; ?>
-    </tbody>
-</table>
 
 
     <nav>
@@ -80,95 +71,8 @@ foreach($result as $info) {
 
   <div class="FAQ">
 
-      <div class="containerFAQ col-4">
-          <div class="dropdown">
-              <button class="dropbtn" for="vraag">Welke platforms kan ik MWII spelen?</button>
-              <div class="dropdown-content">
-                <p href="#" for="antwoord">Je kan MWII op Ps4, Ps5, Xbox One, Xbox Series X/S en pc</p>
-              </div>
-            </div>
-      </div>
-
-      <div class="containerFAQ col-4">
-          <div class="dropdown">
-              <button class="dropbtn" for="vraag">Is er crossplay?</button>
-              <div class="dropdown-content">
-                <p href="#" for="antwoord">Ja er is crossplay, MWII heeft crossplay standaard erbij</p>
-              </div>
-            </div>
-      </div>
-
-      <div class="containerFAQ col-4">
-          <div class="dropdown">
-              <button class="dropbtn" for="vraag">Is er singleplayer?</button>
-              <div class="dropdown-content">
-                <p href="#" for="antwoord">Ja, je kan MWII spelen alleen of met anderen</p>
-              </div>
-            </div>
-      </div>
-
-      <div class="containerFAQ col-4">
-          <div class="dropdown">
-              <button class="dropbtn" for="vraag">Kan je het spel offline spelen?</button>
-              <div class="dropdown-content">
-                <p href="#" for="antwoord">Jammer genoeg niet vanwege dat het spel ook gespeelt wordt op Steam en Battle.net</p>
-              </div>
-            </div>
-      </div>
-
-      <div class="containerFAQ col-4">
-        <div class="dropdown">
-            <button class="dropbtn" for="vraag">Is MWII hetzelfde als MW2?</button>
-            <div class="dropdown-content">
-              <p href="#" for="antwoord">Nee, MWII is een vervolg op een 2019 reboot. Het deelt hetzelfde karakters, thema en ideën</p>
-            </div>
-          </div>
-    </div>
-
-    <div class="containerFAQ col-4">
-      <div class="dropdown">
-          <button class="dropbtn" for="vraag">Hoeveel kost het spel?</button>
-          <div class="dropdown-content">
-            <p href="#" for="antwoord">69.99 euro</p>
-          </div>
-        </div>
-    </div>
-
-    <div class="containerFAQ col-4">
-      <div class="dropdown">
-          <button class="dropbtn" for="vraag">Waarom is het spel 70 euro?</button>
-          <div class="dropdown-content">
-            <p href="#" for="antwoord">MSRP heeft een nieuwe standaard kosten aangepast en hebben de prijzen hoger gemaakt</p>
-          </div>
-        </div>
-    </div>
-
-    <div class="containerFAQ col-4">
-      <div class="dropdown">
-          <button class="dropbtn" for="vraag">Kunnen de mensen in Rusland het spel spelen?</button>
-          <div class="dropdown-content">
-            <p href="#" for="antwoord">Nee, ze hebben het spel in Rusland verwijderd vanwege het thema US vs Rusland derde wereld oorlog</p>
-          </div>
-        </div>
-    </div>
-
-    <div class="containerFAQ col-4">
-      <div class="dropdown">
-          <button class="dropbtn" for="vraag">Moet je MWII kopen om warzone 2.0 te kunnen spelen</button>
-          <div class="dropdown-content">
-            <p href="#" for="antwoord">Nee, warzone 2.0 is gratis te spelen</p>
-          </div>
-        </div>
-    </div>
-
-    <div class="containerFAQ col-4">
-      <div class="dropdown">
-          <button class="dropbtn" for="vraag">Hoeveel aanwinst heeft MWII verkocht?</button>
-          <div class="dropdown-content">
-            <p href="#" for="antwoord">1 miljard dollars</p>
-          </div>
-        </div>
-    </div>
+    <?php echo $faq; ?>
+    
   </div>
     
     <footer class="c-1">
