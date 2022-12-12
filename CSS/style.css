@@ -152,32 +152,32 @@ h1 {
 
 .c-1 {
   background-color: #000000;
-    border: 1px groove #008000;
+    border: 0.0555555555555556rem groove #008000;
   }
   
   .c-2 {
     background-color: rgba(64, 191, 64, 0.2);
-    border: 1px solid hsl(120deg, 50%, 50%);
+    border: 0.0555555555555556rem solid hsl(120deg, 50%, 50%);
   }
   
   .c-3 {
     background-color: rgba(64, 191, 191, 0.2);
-    border: 1px solid hsl(180deg, 50%, 50%);
+    border: 0.0555555555555556rem solid hsl(180deg, 50%, 50%);
   }
   
   .c-4 {
     background-color: rgba(64, 64, 191, 0.2);
-    border: 1px solid hsl(240deg, 50%, 50%);
+    border: 0.0555555555555556rem solid hsl(240deg, 50%, 50%);
   }
   
   .c-5 {
     background-color: rgba(191, 64, 191, 0.2);
-    border: 1px solid hsl(300deg, 50%, 50%);
+    border: 0.0555555555555556rem solid hsl(300deg, 50%, 50%);
   }
   
   .c-6 {
     background-color: rgba(191, 64, 64, 0.2);
-    border: 1px solid hsl(0deg, 50%, 50%);
+    border: 0.0555555555555556rem solid hsl(0deg, 50%, 50%);
   }
   
   .container {
