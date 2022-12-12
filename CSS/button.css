@@ -3,7 +3,7 @@
   color: white;
   padding: 16px;
   font-size: 16px;
-  border: 2px solid #3e8e41;
+  border: none;
   border-radius: 1em;
 }
 
@@ -17,15 +17,15 @@
   display: none;
   position: absolute;
   background-color: #000000;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  min-width: 8.888888888888889rem;
+  box-shadow: 0rem 0.4444444444444444rem 0.8888888888888889rem 0rem rgba(0,0,0,0.2);
   z-index: 1;
   border-radius: 1em;
 }
 
 .dropdown-content a {
   color: black;
-  padding: 12px 16px;
+  padding: 0.6666666666666667rem 0.8888888888888889rem;
   text-decoration: none;
   display: block;
 }
