@@ -172,6 +172,8 @@ h1 {
   }
  .media {
   background-color: #000000;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   height: 21.83333333333333rem;
   display: grid;
   width: 100%;
