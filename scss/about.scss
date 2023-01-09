@@ -9,26 +9,40 @@ html, body {
 h1 {
     font-size: 2.5rem;
     color: white;
+    text-align: center;
 }
 h2 {
     font-size: 2rem;
+    color: white;
+    text-align: center;
 }
 p {
     font-size: 1.3rem;
+    text-align: center;
 }
 ol {
     li {
         font-size: 1.2rem;
+        padding-left: 49.2rem;
+        padding-top: 8rem;
+        position: absolute;
+        text-align: center;
     }
     list-style-type: none;
 }
 main {
     img {
-        margin: 1rem 0 1rem 0;
+        // margin: 1rem 0 1rem 0;
         max-width: 60%;
         height: auto;
         border: 3px solid black;
+        // display: flex;
+        // justify-content: center;
+        // justify-content: center;
     }
-    text-align: center;
-    margin-right: 1rem;
+    
+    // margin-right: 1rem;
+    #task_force_141_img {
+        margin-left: 18rem;
+    }
 }
