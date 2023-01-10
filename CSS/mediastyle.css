@@ -189,4 +189,19 @@ h1 {
     color: #FFFFFF;
     padding: 2rem;
  }
-  
+ .download {
+    width: 17.77777777777778rem;
+ }
+ button {
+    display: flex;
+	background: #00e000;
+	padding: 15px;
+	cursor: pointer;
+	text-decoration: none;
+	text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+button:hover {
+	background: #008000;
+}
